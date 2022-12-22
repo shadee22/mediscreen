@@ -15,5 +15,8 @@ php artisan serve
 #Note!!! :: 
 Dont forget to run Both server and app
 
+#install node js 
+from installer https://nodejs.org/en/download/
+
 #For install Missing Packages :: 
 npm i 
