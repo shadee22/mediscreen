@@ -1,9 +1,9 @@
 <template>
-  <main class="bg-gray-900 text-white h-screen text-xs grid grid-cols-5">
-    <div class="bg-gray-800 center col-span-2">
+  <main class="  h-screen text-xs grid grid-cols-5">
+    <div class="bg-gray-100 center col-span-2">
       <div class="grid">
-        <p class="text-4xl mx-auto font-bold">
-          Welcome to <span class="text-green-500">MediScreen !</span>
+        <p class="text-4xl  mx-auto text-black  font-bold">
+          Welcome to <span class="text-blue-400">MediScreen !</span>
         </p>
         <form method="post" @submit.prevent="login" class="grid mt-12 px-12">
           <!-- <input
@@ -22,34 +22,32 @@
               transition-all
             "
           /> -->
+          <label for="Name" class="font-semibold mt-4 mb-1">Email</label>
           <input
             type="text"
             placeholder="Email"
             required
             v-model="form.email"
             class="
-              bg-gray-900
+             
               border border-gray-700
               rounded-lg
-              text-white
               px-5
-              py-3
-              my-2
-              my-6ocus:bg-gray-800
+              py-3 
               transition-all
               focus:ring-0 focus:ring-offset-0
             "
           />
+          <label for="Name" class="font-semibold mt-4 mb-1">Password</label>
           <input
             type="text"
             placeholder="Password"
             required
             v-model="form.password"
             class="
-              bg-gray-900
+              
               border border-gray-700
               rounded-lg
-              text-white
               px-5
               py-3
               my-6ocus:bg-gray-800
@@ -63,6 +61,7 @@
               hover:bg-blue-600
               transition-all
               px-5
+              text-white
               py-2.5
               rounded-lg
               font-bold
@@ -73,11 +72,9 @@
             Submit
           </button>
         </form>
-        <div
-          class="text-center mt-32 text-gray-500 hover:underline transition-all"
-        >
-          <nuxt-link to="/support">Support</nuxt-link>
-        </div>
+        
+          <NuxtLink to="/support" class="text-center mt-32 text-gray-500 hover:underline transition-all">Support</NuxtLink>
+
       </div>
     </div>
     <div class="center text-3xl h-screen col-span-3 p-32">

@@ -28,7 +28,6 @@ class MedicalDetailsController extends Controller
             // array_push( $li ,'hello');
         //     error_log($a);
         // }
-        
         MedicalDetails::Create($r->toArray())->save();
         return $r;
     }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\LaboDetails;
 use App\Models\MedicalDetails;
 use App\Models\PersonalDetails;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,11 +15,15 @@ class PersonalDetailsController extends Controller
 
     public function update_data(Request $r){
         
-
-        PersonalDetails::find($r['personal']['id'])->update($r['personal']);
-        MedicalDetails::find($r['personal']['medi_id'])->update($r['medical']); 
-        LaboDetails::find($r['personal']['labo_id'])->update($r['labo']);
-        return response(` edited Succussfully`);
+        // try {
+            PersonalDetails::find($r['personal']['id'])->update($r['personal']);
+            MedicalDetails::find($r['personal']['medi_id'])->update($r['medical']); 
+            LaboDetails::find($r['personal']['labo_id'])->update($r['labo']);
+        // } catch (Exception $e) {
+        //     error_log($e);
+        // }
+       
+        return response('edited succusffly');
     }
     public function me(Request $r)
     {

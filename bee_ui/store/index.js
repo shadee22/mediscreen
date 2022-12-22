@@ -10,7 +10,7 @@ export const state = () => ({
 
 export const mutations = {
   edit_detail(state) {
-    this.$axios.post('api/update_data', state.all_inputs).then(res => { console.log(res); })
+    this.$axios.post('api/update_data', state.all_inputs).then(res => { console.log('edited' , res); })
   },
   get_table_details(state) {
     this.$axios.get("api/get_all_patients_details").then((res) => {
@@ -26,19 +26,23 @@ export const mutations = {
     state.all_inputs = Object.create({});
   },
   save_all_details(state) {
-    this.$axios.post('/save_all_details', state.all_inputs).then(res => {
-      console.log(res);
-    })
+    console.log('all details is ' , state.all_inputs);
+    // this.$axios.post('/save_all_details', state.all_inputs).then(res => {
+    //   console.log(res);
+    // })
   },
   save_personal_details(state, data) {
-    this.state.all_inputs['personal'] = data;
+    state.all_inputs['personal'] = data;
 
     // this.$axios.post('http://127.0.0.1:8000/api/medi/save_personal_detail' , data).then(res=>{
     //   console.log(res.data);
     // });
   },
+  save_medical_history(state ,data){
+    state.all_inputs['medical_history'] = data;
+  },
   save_medical_details(state, data) {
-    this.state.all_inputs['medical'] = data;
+    state.all_inputs['medical'] = data;
 
     // this.$axios.post('http://127.0.0.1:8000/api/medi/save_medical_detail' , data).then(res=>{
     //   console.log(res.data);

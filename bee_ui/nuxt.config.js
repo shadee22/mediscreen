@@ -5,7 +5,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'bee_ui',
+    title: 'Mediscreen',
     htmlAttrs: {
       lang: 'en'
     },
@@ -22,13 +22,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@assets/main.css'
-
+    '@assets/main.css',
+    '@/assets/css/main.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  // plugins: ['~/plugins/TiptapVuetify','~/plugins/vuetify'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -43,12 +42,8 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
-    '@nuxtjs/algolia'
+    '@nuxtjs/algolia',
   ],
-  algolia: {
-    apiKey: 'MY_API_KEY',
-    applicationId: 'MY_APPLICATION_ID'
-  },
   axios: {
     baseURL: 'http://127.0.0.1:8000',
     credentials: true,
@@ -56,6 +51,7 @@ export default {
   router: {
     middleware: ['auth']
   },
+ 
 
   auth: {
     redirect: {

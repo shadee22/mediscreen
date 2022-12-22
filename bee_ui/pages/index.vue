@@ -1,12 +1,14 @@
 
 
 <template>
-  <main class="gbg min-h-screen  antialiased pb-32">
+  <main class="min-h-screen antialiased pb-32">
     <Navbar />
+
     <div class="grid grid-cols-12">
       <SideBar />
       <div class="col-span-10 text-sm">
         <PersonalDetail />
+        <MedicalHistory />
         <MedicalExamination />
         <LaboInvestigation />
       </div>
@@ -14,21 +16,17 @@
   </main>
 </template>
 
-<script > export default {
+<script >
+export default {
   data() {
     return {};
   },
   name: "IndexPage",
   methods: {
-    hello(){
-
-
-    }
-
+    hello() {},
   },
   mounted() {
-    this.$store.commit('reset_details');
+    this.$store.commit("reset_details");
   },
-
 };
 </script>

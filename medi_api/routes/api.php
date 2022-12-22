@@ -45,7 +45,6 @@ Route::post('/medi/save_labo_detail' , [LaboDetailsController::class , 'create']
 
 
 Route::get('/medi/testing' , [PersonalDetailsController::class , 'testing']);
-Route::get('/medi/testing' , [PersonalDetailsController::class , 'testing']);
 Route::get('/get_all_patients_details', [PersonalDetailsController::class,'get_all_patients']);
 Route::post('/delete_selected_patient', [PersonalDetailsController::class,'delete_selected_patient']);
 Route::post('/get_edit_selected_patient_data', [PersonalDetailsController::class,'edit_selected_patient']);

@@ -1,7 +1,7 @@
 
 
 <template>
-  <main class="gbg min-h-screen antialiased pb-32">
+  <main class="min-h-screen antialiased pb-32">
     <Navbar />
     <div class="grid grid-cols-12">
       <SideBar />
@@ -35,6 +35,7 @@ export default {
     this.$axios
       .post("/api/get_edit_selected_patient_data", { data: this.current_id })
       .then((res) => {
+        console.log(res.data['labo']);
         this.e_data = res.data;
         this.p = res.data;
         this.m = this.p['medi']

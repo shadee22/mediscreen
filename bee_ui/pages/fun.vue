@@ -1,8 +1,7 @@
 <template>
-<div class="flex h-screen w-screen items-center text-4xl font-bold justify-center">
-
-    <h1>This is fun page</h1>
-</div>
+    <main class="h-screen bg-red">
+        <h1>This is Dashboard</h1>
+    </main>
 </template>
 
 
@@ -10,7 +9,7 @@
 export default {
     data(){
         return{
-
+            public_path : process.env.BASE_URL
         }
     }
 }

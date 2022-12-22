@@ -1,15 +1,15 @@
 <template>
-  <main class="col-span-2 h-full antialiased pt-10 text-gray-500 text-sm">
+  <main class="col-span-2 h-full  antialiased pt-10 text-gray-500 text-sm">
     <ul class="pl-10 py-2 cursor-pointer">
       <li
         v-for="setting in side_options"
         :key="setting.id"
         @click="alerter(setting)"
         class="
-          hover:bg-green-900
-          hover:text-white
+          hover:bg-gray-100
           rounded-xl
           my-2
+          font-semibold
           px-5
           py-2.5
           drop-shadow-lg
@@ -29,7 +29,7 @@ const Swal = require("sweetalert2");
 export default {
   data() {
     return {
-      side_options: ["Patients", "Analytics", "Settings"],
+      side_options: ["Patients", "Analytics", "Documents" ,"New Report"],
     };
   },
   methods: {
@@ -37,8 +37,14 @@ export default {
       this.$router.push("/settings");
     },
     alerter(txt) {
+
       if (txt === "Patients") {
         this.$router.push("/patients");
+      } else if(txt == 'Documents'){
+            this.$router.push("/Documents");
+
+      }else if(txt == 'New Report'){
+          this.$router.push('/')
       }
       else{
       Swal.fire({
