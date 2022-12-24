@@ -20,3 +20,13 @@ from installer https://nodejs.org/en/download/
 
 #For install Missing Packages :: 
 npm i 
+
+
+#Problems
+
+Install Laraval Through composer
+
+::
+Composer install run with specific recommended command
+
+install tableplus and change .env file
