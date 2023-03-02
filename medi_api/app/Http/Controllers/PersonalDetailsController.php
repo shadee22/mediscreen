@@ -61,7 +61,7 @@ class PersonalDetailsController extends Controller
         $medical_details = array_merge($r['medical'], array('id' => $uni));
         $labo_details = array_merge($r['labo'], array('id' => $uni));
         $personal_details = array_merge($r['personal'], array('labo_id' => $uni, 'medi_id' => $uni));
-
+        
         MedicalDetails::Create($medical_details)->save();
         LaboDetails::Create($labo_details)->save();
         PersonalDetails::Create($personal_details)->save();
@@ -69,7 +69,7 @@ class PersonalDetailsController extends Controller
         ///RESET TABLES
 
         // DB::table('personal_details')->truncate();
-        // DB::table('medical_details')->truncate();
+        // DB::table('medical_details')->truncate();    
         // DB::table('labo_details')->truncate();
 
         // $li = [];

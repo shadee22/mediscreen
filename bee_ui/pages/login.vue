@@ -105,6 +105,8 @@ export default {
           },
         }).then(res=>{
           console.log(res)    ;
+        }).catch(e=>{
+          alert("Credentials are Wrong or Please Start Api First!");
         });
      
       //  this.$router.push('/')

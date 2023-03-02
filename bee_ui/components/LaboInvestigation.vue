@@ -220,8 +220,20 @@
                 class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
               />
             </div>
+             <div class="m-2">
+              <label for="">Remarks</label>
+
+              <input
+                required
+                type="text"
+                v-model="labo_form.Remarks"
+                placeholder="Remarks"
+                class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
+              />
+            </div>
           </div>
         </div>
+        
       </div>
 
       <button
@@ -281,6 +293,7 @@ export default {
         AntiHCV: "Not Done",
         "HIVTeST(HIBI-II)": "Not Done",
         HbsAg: "Not Done",
+        'Remarks' : '--'
       },
       // inputs: this.$store.state.inputs,
     };
@@ -288,6 +301,7 @@ export default {
 
   mounted() {
     if (this.$route.name !== "index") {
+      console.log("edit_data" , this.edit_data)
       setTimeout(() => {
         this.labo_form = this.edit_data;
       }, 1000);

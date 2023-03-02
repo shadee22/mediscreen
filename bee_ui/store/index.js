@@ -27,9 +27,9 @@ export const mutations = {
   },
   save_all_details(state) {
     console.log('all details is ' , state.all_inputs);
-    // this.$axios.post('/save_all_details', state.all_inputs).then(res => {
-    //   console.log(res);
-    // })
+    this.$axios.post('/save_all_details', state.all_inputs).then(res => {
+      console.log(res);
+    })
   },
   save_personal_details(state, data) {
     state.all_inputs['personal'] = data;
@@ -49,7 +49,7 @@ export const mutations = {
     // });
   },
   save_labo_details(state, data) {
-    this.state.all_inputs['labo'] = data;
+    state.all_inputs['labo'] = data;
 
     // this.$axios.post('http://127.0.0.1:8000/api/medi/save_labo_detail' , data).then(res=>{
     //   console.log(res.data);

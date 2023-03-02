@@ -65,6 +65,7 @@ export default {
   mounted() {
     this.$store.commit("get_table_details");
     this.$axios.get("api/get_all_patients_details").then((res) => {
+      console.log(res);
       let col2 = [];
       Object.keys(res.data[0]).forEach((el) => {
         col2.push({
@@ -72,11 +73,22 @@ export default {
           field: el,
         });
       });
-       col2[1].filterOptions = { enabled: true };
+      col2[1].filterOptions = { enabled: true };
       col2[2].filterOptions = { enabled: true };
       col2[2].width =  '150px';
       col2[3].filterOptions = { enabled: true };
       col2[3].width =  '150px';
+      col2[4].filterOptions = { enabled: true };
+      col2[5].filterOptions = { enabled: true };
+      col2[6].filterOptions = { enabled: true };
+      col2[7].filterOptions = { enabled: true };
+      col2[8].filterOptions = { enabled: true };
+      col2[9].filterOptions = { enabled: true };
+      col2[10].filterOptions = { enabled: true };
+      col2[11].filterOptions = { enabled: true };
+      col2[12].filterOptions = { enabled: true };
+      col2[13].filterOptions = { enabled: true };
+      col2[14 ].filterOptions = { enabled: true };
      
       this.cols = col2;
       this.rows = res.data;
