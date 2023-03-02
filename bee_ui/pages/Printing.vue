@@ -1,6 +1,6 @@
 <template>
-  <div class="font-serif relative flex justify-center">
-    <NuxtLink to="/">
+  <div class="max-h-[1122.24px] h-[1122.24px] w-[793.92px] max-w-[793.92px]  font-sans font-bold relative flex justify-center">
+    <!-- <NuxtLink to="/">
       <button
         class="
           absolute
@@ -73,11 +73,11 @@
       </svg>
 
       Print Certificate
-    </button>
+    </button> -->
 
     <img
-      src="~/assets/sss.png"
-      class="h-screen w-fit"
+      src="~/assets/ssss.png"
+      class="max-h-[1122.24px] h-[1122.24px] w-[793.92px] max-w-[793.92px]  "
       alt=""
       :class="{
         'opacity-0': printing,
@@ -87,14 +87,13 @@
     <main
       v-if="datas.personal"
       class="
+        max-h-[1122.24px] h-[1122.24px] w-[793.92px] max-w-[793.92px] 
         absolute
-        font-serif
         overflow-hidden
-        text-[9px]
-        pl-8
-        pt-24
+        text-[0.8em]
+        px-[2em]
+        pt-[12em]
         mt-1
-        font-thin
       "
     >
       <!-- PERSONAL DETAILS -->
@@ -104,65 +103,65 @@
         <p>{{ datas.personal["First Name"] }}</p>
         <p>{{ datas.personal["Serial No"] }}</p>
       </div>
-      <div class="grid grid-cols-full mt-3 ml-12 text-start">
+      <div class="grid-cols-full mt-5 ml-28 grid text-start">
         <p>{{ datas.personal["District"] }}</p>
       </div>
-      <div class="grid grid-cols-12 ml-6 mt-1 text-center">
-        <p class="col-span-1">{{ datas.personal["Sex"][0] }}</p>
-        <p class="col-span-2">{{ datas.personal["Age"] }}</p>
-        <p class="col-span-3">{{ datas.personal["Status"] }}</p>
-        <p class="col-span-3">{{ datas.personal["Nationality"] }}</p>
-        <p class="col-span-1">{{ datas.personal["Height(cm)"] }}</p>
-        <p class="col-span-2 ml-4">{{ datas.personal["Weight(cm)"] }}</p>
+      <div class="flex gap-2">
+        <p class="ml-20">{{ datas.personal["Sex"][0] }}</p>
+        <p class="ml-14">{{ datas.personal["Age"] }}</p>
+        <p class="ml-24">{{ datas.personal["Status"] }}</p>
+        <p class="ml-32">{{ datas.personal["Nationality"] }}</p>
+        <p class="ml-16">{{ datas.personal["Height(cm)"] }}</p>
+        <p class="ml-20">{{ datas.personal["Weight(cm)"] }}</p>
       </div>
-      <div class="grid grid-cols-3 text-center">
-        <p class="ml-8">{{ datas.personal["Passport NO"] }}</p>
+      <div class="grid grid-cols-3 mt-[0.2em] text-center">
+        <p class="ml-16">{{ datas.personal["Passport NO"] }}</p>
         <p>{{ datas.personal["Place of Issue"] }}</p>
-        <p class="ml-8 text-right">{{ datas.personal["Position Applied for"] }}</p>
+        <p class="ml-12">{{ datas.personal["Position Applied for"] }}</p>
       </div>
-      <div class="grid grid-cols-3 pl-4 text-center">
+      <div class="grid grid-cols-3 mt-[0.3em] text-center">
         <p>{{ datas.personal["Date"] }}</p>
         <p>{{ datas.personal["Recruiting Agency"] }}</p>
         <p class="ml-2">{{ datas.personal["Country"] }}</p>
       </div>
 
       <!-- SIGNATURES -->
-      <div class="grid grid-rows-2 pt-2 pb-16 px-16">
-        <div class="flex ml-44">
-          <p class="pr-8">{{ datas.medical_history["deppresion"] }}</p>
-          <p class="mx-8">{{ datas.medical_history["allergy"] }}</p>
+      <div class="grid grid-rows-2  px-32 pt-5 pb-16">
+        <div class="ml-64 pl-3  flex">
+          <p class="pr-8">{{ datas.medical_history["deppresion"] }}Nil</p>
+          <p class="ml-14">{{ datas.medical_history["allergy"] }}</p>
         </div>
         <p>{{ datas.medical_history["others"] }}</p>
       </div>
 
       <!-- MEDI + LABO -->
       <div
-        class="grid grid-cols-2 mt-8 pr-4 pt-1 text-[9px] leading-3 text-right"
+        class="mt-[7.4em] grid grid-cols-2 pr-4 pt-1 text-right  leading-3"
       >
         <!-- MEDICAL -->
-        <div class="mr-2">
+        <div class="mr-2 space-y-2">
           <div class="mt-1">{{ datas.medical["Right_Eye"] }}</div>
-          <div class="mt-1">{{ datas.medical["Left_Eye"] }}</div>
+          <div class="pt-[0.3em]">{{ datas.medical["Left_Eye"] }}</div>
           <div class="">{{ datas.medical["Right_Ear"] }}</div>
           <div class="">{{ datas.medical["Left_Ear"] }}</div>
-          <div class="mt-2">{{ datas.medical["Blood_pressure"] }}</div>
+          <div class="pt-3">{{ datas.medical["Blood_pressure"] }}</div>
           <div class="">{{ datas.medical["Heart"] }}</div>
-          <div class="mt-1">{{ datas.medical["Lungs"] }}</div>
-          <div class="mt-1">{{ datas.medical["Abdomen"] }}</div>
+          <div class="pt-1">{{ datas.medical["Lungs"] }}</div>
+          <div class="pt-1">{{ datas.medical["Abdomen"] }}</div>
           <div class="">{{ datas.medical["Others"] }}</div>
           <div class="mt-1">{{ datas.medical["Hernia"] }}</div>
-          <div class="mt-1">{{ datas.medical["Vericose_veins"] }}</div>
-          <div class="">{{ datas.medical["Extremites"] }}</div>
-          <div class="mt-1">{{ datas.medical["Skin"] }}</div>
-          <div class="mt-1">{{ datas.medical["Venerial_Diseases"] }}</div>
+          <div class="pt-1">{{ datas.medical["Vericose_veins"] }}</div>
+          <div class="pt-1">{{ datas.medical["Extremites"] }}</div>
+          <div class="pt-1">{{ datas.medical["Skin"] }}</div>
+          <div class="pt-1">{{ datas.medical["Venerial_Diseases"] }}</div>
           <div class="">{{ datas.medical["Others"] }}</div>
         </div>
         <!-- LABORATARY -->
-        <div class="text-[8px]">
+        <div class="ml-60 space-y-[6.2px] text-left">
           <p class="">{{ datas.labo["Suger"] }}</p>
           <p>{{ datas.labo["Albumin"] }}</p>
           <p>{{ datas.labo["Pregnancy"] }}</p>
-          <p class="-mt-1">{{ datas.labo["Helmenthes"] }}</p>
+          <p class="">{{ datas.labo["Helmenthes"] }}</p>
           <p class="">{{ datas.labo["Salmonella/Shigella"] }}</p>
           <p>{{ datas.labo["VCholera"] }}</p>
           <p>{{ datas.labo["Giardia"] }}</p>
@@ -182,7 +181,7 @@
       </div>
 
       <!-- Signature and First and Last Name -->
-      <div class="flex gap-2 justify-end mt-3 mr-12">
+      <div class="mt-5 pt-1 mr-48 flex justify-end gap-2">
         <div class="w-16 mr-16 flex">
           <!-- Mr -->
           <p v-if="mrs_miss == 'Mr'" class="ml-4">XXXXX</p>
@@ -195,13 +194,14 @@
         <p>{{ datas.personal["First Name"] }}</p>
         <p>{{ datas.personal["Last Name"] }}</p>
       </div>
-      <div class="flex gap-2 justify-start mt-3 mr-16">
-        <p v-if="datas.personal.Sex[0] == 'F'" class="ml-16 pl-4">XX</p>
-        <p v-else class="ml-16 pl-4">XXX</p>
-        <p v-if="datas.personal.Sex[0] == 'F'" class="ml-12 pl-6">XXXXXXX</p>
-        <p v-else class="ml-12 pl-2">XXXX</p>
+      <div class="mt-4 mr-16 flex justify-start gap-2">
+       <p v-if="datas.personal.Sex[0] == 'F'" class="ml-36 pl-4">XX</p>
+       <p v-else class="ml-44 pl-4">XXX</p>
+           <p v-if="datas.personal.Sex[0] == 'F'" class="ml-24 text-[1.2em] pl-6">XXXXXXX</p>
+        <p v-else class="ml-20 text-[1.4em] pl-2">XXXX</p>
       </div>
     </main>
+   
   </div>
 </template>
 <style scoped>
