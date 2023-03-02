@@ -293,7 +293,7 @@ export default {
         AntiHCV: "Not Done",
         "HIVTeST(HIBI-II)": "Not Done",
         HbsAg: "Not Done",
-        'Remarks' : '--'
+        'Remarks' : 'No Remarks'
       },
       // inputs: this.$store.state.inputs,
     };
