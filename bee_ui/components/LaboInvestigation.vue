@@ -1,6 +1,6 @@
 <template>
   <main class="mt-20 w-full">
-    <h1 class="text-3xl p-2 bg-blue-100 antialiased font-bold ml-12  mt-5">
+    <h1 class="text-3xl p-2 bg-blue-100 antialiased font-bold ml-12 mt-5">
       Laboratary Investigation
     </h1>
     <form
@@ -132,7 +132,7 @@
                 class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
               />
             </div>
-            <div class="m-2">
+            <!-- <div class="m-2">
               <label for="">VDRL</label>
               <input
                 required
@@ -141,8 +141,19 @@
                 placeholder="VDRL"
                 class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
               />
-            </div>
+            </div> -->
             <div class="m-2">
+              <label for="">VDRL</label>
+              <select
+                class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
+                v-model="labo_form['VDRL']"
+                placeholder="VDRL"
+              >
+                <option value="Non Reactive" selected>Non Reactive</option>
+                <option value="Reactive">Reactive</option>
+              </select>
+            </div>
+            <!-- <div class="m-2">
               <label for="">LFTS</label>
               <input
                 required
@@ -151,8 +162,20 @@
                 placeholder="L.F.T.S"
                 class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
               />
-            </div>
+            </div> -->
             <div class="m-2">
+              <label for="">LFTS</label>
+              <select
+                class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
+                v-model="labo_form['LFTS']"
+                placeholder="L.F.T.S"
+              >
+                <option value="Not Done" selected>Not Done</option>
+                <option value="Normal">Normal</option>
+              </select>
+            </div>
+
+            <!-- <div class="m-2">
               <label for="">Creatinine</label>
               <input
                 required
@@ -161,8 +184,19 @@
                 placeholder="Creatinine"
                 class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
               />
-            </div>
+            </div> -->
             <div class="m-2">
+              <label for="">Creatinine</label>
+              <select
+                class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
+                v-model="labo_form['Creatinine']"
+                placeholder="Creatinine"
+              >
+                <option value="Not Done" selected>Not Done</option>
+                <option value="Normal">Normal</option>
+              </select>
+            </div>
+            <!-- <div class="m-2">
               <label for="">Urea</label>
               <input
                 required
@@ -171,8 +205,19 @@
                 placeholder="Urea"
                 class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
               />
-            </div>
+            </div> -->
             <div class="m-2">
+              <label for="">Urea</label>
+              <select
+                class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
+                v-model="labo_form['Urea']"
+                placeholder="Urea"
+              >
+                <option value="Not Done" selected>Not Done</option>
+                <option value="Normal">Normal</option>
+              </select>
+            </div>
+            <!-- <div class="m-2">
               <label for="">TPHA</label>
               <input
                 required
@@ -181,13 +226,24 @@
                 placeholder="TPHA"
                 class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
               />
+            </div> -->
+            <div class="m-2">
+              <label for="">TPHA</label>
+              <select
+                class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
+                v-model="labo_form['TPHA']"
+                placeholder="TPHA"
+              >
+                <option value="Non Reactive" selected>Non Reactive</option>
+                <option value="Reactive">Reactive</option>
+              </select>
             </div>
           </div>
         </div>
         <div class="mt-4">
           <div class="text-xl mx-2 font-semibold">Serology</div>
           <div class="flex">
-            <div class="m-2">
+            <!-- <div class="m-2">
               <label for="">AntiHCV</label>
 
               <input
@@ -197,8 +253,21 @@
                 placeholder="AntiHCV"
                 class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
               />
-            </div>
+            </div> -->
             <div class="m-2">
+              <label for="">AntiHCV</label>
+              <select
+                class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
+                v-model="labo_form.AntiHCV"
+                placeholder="AntiHCV"
+              >
+                <option value="Non Reactive" selected>Non Reactive</option>
+                <option value="Reactive">Reactive</option>
+                <option value="Done">Done</option>
+                <option value="Not Done">Not Done</option>
+              </select>
+            </div>
+            <!-- <div class="m-2">
               <label for="">HIVTeST(HIBI-II)</label>
 
               <input
@@ -208,8 +277,20 @@
                 placeholder="HIVTeST(HIBI-II)"
                 class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
               />
+            </div> -->
+             <div class="m-2">
+            <label for="">HIVTeST(HIBI-II)</label>
+              <select
+                class="mt-1 px-5 py-2.5 rounded-lg w-52 border text-black flex"
+                v-model="labo_form['HIVTeST(HIBI-II)']"
+                placeholder="HIVTeST(HIBI-II)"
+              >
+                <option value="Negative">Negative</option>
+                <option value="Reactive">Reactive</option>
+                <option value="Done">Done</option>
+              </select>
             </div>
-            <div class="m-2">
+            <!-- <div class="m-2">
               <label for="">HbsAg</label>
 
               <input
@@ -219,8 +300,21 @@
                 placeholder="HbsAg "
                 class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
               />
+            </div> -->
+                <div class="m-2">
+               <label for="">HbsAg</label>
+              <select
+                class="mt-1 px-5 py-2.5 rounded-lg border text-black flex"
+                  v-model="labo_form['HbsAg']"
+                placeholder="HbsAg "
+              >
+                <option value="Non Reactive" selected>Non Reactive</option>
+                <option value="Reactive">Reactive</option>
+                <option value="Done">Done</option>
+                <option value="Not Done">Not Done</option>
+              </select>
             </div>
-             <div class="m-2">
+            <div class="m-2">
               <label for="">Remarks</label>
 
               <input
@@ -233,28 +327,11 @@
             </div>
           </div>
         </div>
-        
       </div>
 
       <button
         type="submit"
-        class="
-          py-2.5
-          w-2/4
-          mx-12
-          text-white
-          antialiased
-          hover:bg-blue-700
-          font-bold
-          text-lg
-          mt-6
-          ml-12
-          rounded-full
-          transition-all
-          backdrop-blur-lg
-          drop-shadow-lg
-          bg-blue-600
-        "
+        class="py-2.5 w-2/4 mx-12 text-white antialiased hover:bg-blue-700 font-bold text-lg mt-6 ml-12 rounded-full transition-all backdrop-blur-lg drop-shadow-lg bg-blue-600"
       >
         <!-- {{ done ? "Updated ✅ " : "Submit And Print" }} -->
         <span>Submit and Print 🖨️</span>
@@ -286,14 +363,14 @@ export default {
         "Micro Filaria": "Not Done",
         "FBS/RBS": "Nil",
         VDRL: "Non Reactive",
-        LFTS: "Nil",
-        Creatinine: "Nil",
-        Urea: "Nil",
+        LFTS: "Not Done",
+        Creatinine: "Not Done",
+        Urea: "Not Done",
         TPHA: "Non Reactive",
-        AntiHCV: "Not Done",
-        "HIVTeST(HIBI-II)": "Not Done",
+        AntiHCV: "Non Reactive",
+        "HIVTeST(HIBI-II)": "Negative",
         HbsAg: "Not Done",
-        'Remarks' : 'No Remarks'
+        Remarks: "No Remarks",
       },
       // inputs: this.$store.state.inputs,
     };
@@ -301,7 +378,7 @@ export default {
 
   mounted() {
     if (this.$route.name !== "index") {
-      console.log("edit_data" , this.edit_data)
+      console.log("edit_data", this.edit_data);
       setTimeout(() => {
         this.labo_form = this.edit_data;
       }, 1000);
@@ -317,28 +394,27 @@ export default {
         this.$store.state.all_inputs.personal &&
         this.$store.state.all_inputs.medical !== undefined
       ) {
-              // While Editing
-                this.$store.commit("save_labo_details", this.labo_form);
-              if (this.$route.name !== "index") {
-
-                this.$store.commit("edit_detail");
-                this.$router.push("/printing");
-              } else {
-                Swal.fire({
-                  title: "Confirm to Next Step!",
-                  icon: "info",
-                  confirmButtonText: "Print the Certificate!",
-                  cancelButtonText: "Not Confirm",
-                  showCancelButton: true,
-                  cancelButtonColor: "red",
-                }).then((res) => {
-                  if (res.isConfirmed) {
-                    this.$store.commit("save_labo_details", this.labo_form);
-                    this.$store.commit("save_all_details");
-                     this.$router.push("/printing");
-                  }
-                });
-              }
+        // While Editing
+        this.$store.commit("save_labo_details", this.labo_form);
+        if (this.$route.name !== "index") {
+          this.$store.commit("edit_detail");
+          this.$router.push("/printing");
+        } else {
+          Swal.fire({
+            title: "Confirm to Next Step!",
+            icon: "info",
+            confirmButtonText: "Print the Certificate!",
+            cancelButtonText: "Not Confirm",
+            showCancelButton: true,
+            cancelButtonColor: "red",
+          }).then((res) => {
+            if (res.isConfirmed) {
+              this.$store.commit("save_labo_details", this.labo_form);
+              this.$store.commit("save_all_details");
+              this.$router.push("/printing");
+            }
+          });
+        }
       } else {
         Swal.fire(
           "Hohooo!",
